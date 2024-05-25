@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" type="image/x-icon" href="./img/loading.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <script src="templates.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body id="body" onload="init()">
+
+    <header>
+        <div class="header">
+            <div class="logo">
+                <h1>Pokedex</h1>
+            </div>
+
+
+            <div>
+                <form class="f1" onsubmit="searchPokemons(); return false">
+                    <input onkeyup="searchPokemons()" class="search-input" id="search" type="text" required minlength="1" maxlength="20"
+                        placeholder="Search Pokemon">
+                    <button type="submit" class="search-btn">
+                        <img src="./img/search (1).svg" alt="">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div id="loading-screen">
+        <img src="./img/loading.png" alt="">
+    </div>
+
+    <div id="main-content">
+    </div>
+
+    <div id="modal">
+        <button class="nav-btn nav-btn-left" onclick="prevCard()">❮</button>
+        <button class="nav-btn nav-btn-right" onclick="nextCard()">❯</button>
+        <button class="nav-btn close-btn" onclick="closeModal()">&times;</button>
+
+        <div id="modal-content"></div>
+    </div>
+</body>
+
+</html>
